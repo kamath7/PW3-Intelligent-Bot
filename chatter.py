@@ -7,6 +7,8 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 
 from tensorflow.keras.models import load_model
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('intents.json').read())
